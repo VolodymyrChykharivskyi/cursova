@@ -1,0 +1,11 @@
+{% extends "main.html" %}
+{% block content %}
+     <div class="result">
+         <div class="info">
+            <h3>Your result is {{ c }} from {{ t }}</h3>
+            <form action="/quiz" method='GET'>
+                <button type="submit" class="btn btn-success">Try again</button>
+            </form>
+         </div>
+    </div>
+{% endblock %}

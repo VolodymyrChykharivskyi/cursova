@@ -1,0 +1,26 @@
+{% extends "main.html" %}
+{% block content %}
+    {% from "_render_field.html" import render_field %}
+
+    <h1 class="text-center mt-3">Test name: {{ t }}</h1>
+
+    <hr>
+
+    <form action='/result' method='POST' class="mt-5">
+        <ol>
+            {% for i in q %}
+                <li><b>{{ i['question_text'] }}</b></li>
+                {% for j in i['options'] %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value='{{ j }}' name='{{ i['id'] }}' id='{{ j + (i['id'] | string) }}'>
+                        <label class="form-check-label" for='{{ j + (i['id'] | string) }}'>
+                            {{ j }}
+                        </label>
+                    </div>
+                {% endfor %}
+            {% endfor %}
+        </ol>
+
+        <input type="submit" value="Submit" class="btn btn-success mb-3 mt-3 button mr-0" />
+    </form>
+{% endblock %}

@@ -1,0 +1,35 @@
+body {
+    background: #a7b5b7;
+}
+
+.content {
+    min-height: 80vh;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.result {
+    padding: 10px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 35vh auto;
+}
+
+.button {
+    width: 200px;
+}
